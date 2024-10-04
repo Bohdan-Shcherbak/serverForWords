@@ -1,8 +1,9 @@
-const express = require('express');
-const { createProxyMiddleware } = require('http-proxy-middleware');
-const cors = require('cors');
-const fetch = require('node-fetch'); 
-const { exec } = require('child_process');
+// const express = require('express');
+// const { createProxyMiddleware } = require('http-proxy-middleware');
+// const cors = require('cors');
+// const fetch = require('node-fetch'); 
+// const { exec } = require('child_process');
+let wrapper = document.querySelector('.wrapper');
 
 
 
@@ -42,7 +43,9 @@ fetch(link)
   })
   .then((text)=>{
     // console.log(text);
-    newValue = text.slice(1,100);
+    // newValue = text.slice(1,100);
+    const newConstt = text.slice(1,100);
+    wrapper.innerHTML = newConstt;
 
   })
   .catch((error) => {
