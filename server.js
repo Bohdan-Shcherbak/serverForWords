@@ -1,7 +1,12 @@
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const cors = require('cors');
+const fetch = require('node-fetch'); 
+const { exec } = require('child_process');
 
+
+
+let newValue = '';
 function mainF(){
 const app = express();
 
@@ -24,4 +29,22 @@ app.listen(PORT, () => {
 });
 }
 
-mainF()
+let link = 'https://slovnyk.ua/index.php?s1=18&s2=74';
+
+fetch(link)
+  .then((response) =>{
+    if (!response.ok) {
+      console.log('noOk');
+    } else{
+        console.log('OOK');
+    }
+  return response.text();
+  })
+  .then((text)=>{
+    // console.log(text);
+    newValue = text.slice(1,100);
+
+  })
+  .catch((error) => {
+    console.log('noOk2');
+  });
