@@ -48,3 +48,6 @@ fetch(link)
   .catch((error) => {
     console.log('noOk2');
   });
+
+  console.log(newValue);
+  
