@@ -1,11 +1,9 @@
 { 
-  "name": "serverforwords",
+  "name": "proxy-server",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "start": "node api/proxy.js"
   },
-  "main": "proxy.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
