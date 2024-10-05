@@ -10,7 +10,7 @@ app.use(cors({
 app.get('/proxy', async (req, res) => {
   try {
     // Зробіть запит до стороннього сайту
-    const response = await fetch('https://slovnyk.ua');
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await response.text();
     res.status(200).send(data);
   } catch (error) {
