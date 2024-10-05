@@ -2,11 +2,8 @@
   "name": "proxy-server",
   "version": "1.0.0",
   "scripts": {
-    "start": "node api/proxy.js"
+    "start": "api/proxy.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.0",
