@@ -3,12 +3,14 @@ const fetch = require('node-fetch');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());  // Додаємо CORS, щоб браузери могли звертатися до вашого сервера
+app.use(cors({
+    origin: '*'  // Дозволяємо запити з будь-якого джерела
+  }));
 
 app.get('/proxy', async (req, res) => {
   try {
     // Зробіть запит до стороннього сайту
-    const response = await fetch('https://slovnyk.ua/index.php?s1=15&s2=104');
+    const response = await fetch('https://slovnyk.ua');
     const data = await response.text();
     res.status(200).send(data);
   } catch (error) {
