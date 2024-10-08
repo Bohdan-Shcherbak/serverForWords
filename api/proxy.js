@@ -11,6 +11,11 @@ app.get('/proxy', async (req, res) => {
   try {
     // Зробіть запит до стороннього сайту
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+
+    // Перевіряємо статус відповіді
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
     const data = await response.text();
     res.status(200).send(data);
   } catch (error) {
