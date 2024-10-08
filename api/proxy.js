@@ -11,7 +11,7 @@ app.use(cors(
 app.get('/proxy', async (req, res) => {
   try {
     // Зробіть запит до стороннього сайту
-    const response = await fetch('https://slovnyk.ua/index.php');
+    const response = await fetch('https://jsonplaceholder.typicode.com/postsp');
 
     // Перевіряємо статус відповіді
     if (!response.ok) {
