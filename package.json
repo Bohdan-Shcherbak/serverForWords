@@ -2,7 +2,7 @@
   "name": "proxy-server",
   "version": "1.0.0",
   "scripts": {
-    "start": "api/proxy.js"
+    "start": "index.html"
   },
   "dependencies": {
     "cors": "^2.8.5",
