@@ -3,9 +3,10 @@ const fetch = require('node-fetch');
 const cors = require('cors');
 
 const app = express();
-app.use(cors({
-    origin: '*'  // Дозволяємо запити з будь-якого джерела
-  }));
+app.use(cors(
+    // origin: '*' 
+     // Дозволяємо запити з будь-якого джерела
+  ));
 
 app.get('/proxy', async (req, res) => {
   try {
