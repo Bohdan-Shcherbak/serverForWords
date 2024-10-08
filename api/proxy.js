@@ -11,7 +11,7 @@ app.use(cors(
 app.get('/proxy', async (req, res) => {
   try {
     // Зробіть запит до стороннього сайту
-    const response = await fetch('https://slovnyk.ua/index.php?s1=1&s2=0');
+    const response = await fetch('https://slovnyk.ua/index.php');
 
     // Перевіряємо статус відповіді
     if (!response.ok) {
