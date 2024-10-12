@@ -2,7 +2,11 @@
   "name": "proxy-server",
   "version": "1.0.0",
   "scripts": {
-    "start": "index.html"
+    "start": "node api/proxy.js"
+  },
+
+  "engines": {
+    "node": "v22.9.0"
   },
   "dependencies": {
     "cors": "^2.8.5",

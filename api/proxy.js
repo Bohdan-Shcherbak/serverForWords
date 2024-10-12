@@ -1,6 +1,7 @@
-const express = require('express');
-const fetch = require('node-fetch');
-const cors = require('cors');
+const express = require("express");
+
+const fetch = require("node-fetch");
+const cors = require("cors");
 
 const app = express();
 app.use(cors({
@@ -12,7 +13,7 @@ app.use(cors({
 app.get('/proxy', async (req, res) => {
   try {
     // Зробіть запит до стороннього сайту
-    const response = await fetch('https://jsonplaceholder.typicode.com/postsp');
+    const response = await fetch('https://slovnyk.ua/index.php?s1=9&s2=0');
 
     // Перевіряємо статус відповіді
     if (!response.ok) {
