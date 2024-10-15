@@ -1,1 +1,1 @@
-{"name":"proxy-server","version":"1.0.0","type":"module","scripts":{"start":"node server.js"},"engines":{"node":"^22.9.0","npm":"^10.8.3"},"dependencies":{"cors":"^2.8.5","express":"^4.21.1","fetch":"^1.1.0","node-fetch":"^3.3.2"}}
+{"name":"proxy-server","version":"1.0.0","type":"module","scripts":{"start":"node api/proxy.js"},"engines":{"node":"^22.9.0","npm":"^10.8.3"},"dependencies":{"cors":"^2.8.5","express":"^4.21.1","fetch":"^1.1.0","node-fetch":"^3.3.2"}}
