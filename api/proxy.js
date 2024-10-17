@@ -5,7 +5,8 @@ import cors from 'cors';
 const app = express();
 app.use(cors()); // Додаємо підтримку CORS
 
-// const PORT = 3001; // Порт для вашого проксі
+const PORT = 3001; 
+// Порт для вашого проксі
 
 // Маршрут для запиту до зовнішнього сайту
 app.get('/proxy', async (req, res) => {
@@ -20,6 +21,6 @@ app.get('/proxy', async (req, res) => {
 
 module.exports = app;
 
-// app.listen(PORT, () => {
-//   console.log(`Проксі-сервер запущено на порту ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Проксі-сервер запущено на порту ${PORT}`);
+});
