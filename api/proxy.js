@@ -11,7 +11,7 @@ const PORT = 3001;
 // Маршрут для запиту до зовнішнього сайту
 app.get('/proxy', async (req, res) => {
   try {
-    const response = await fetch('https://'); // Ваше посилання
+    const response = await fetch('https://slovnyk.ua/index.php?s1=2&s2=0'); // Ваше посилання
     const data = await response.text(); // Отримуємо відповідь
     res.send(data); // Відправляємо дані клієнту
   } catch (error) {
